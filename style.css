@@ -35,8 +35,10 @@ body {
 }
 
 main {
-    background-color: rgba(0, 3, 25, 1);
+    background: rgba(0, 3, 25, 1) url('/images/sea.png') no-repeat fixed center;
     backdrop-filter: blur(4px);
+    background-blend-mode: lighten;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -492,6 +494,13 @@ header {
     width: 100%;
 }
 
+.footer-parent-icon span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 .footer-parent-icons {
     display: flex;
     gap: 35px;
@@ -666,12 +675,14 @@ header {
     .footer-wrapper {
         width: 90%;
         margin: 0 auto;
+        padding: 0;
     }
 
     .footer-parent {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
     }
 
     .footer-parent-lists {
@@ -682,6 +693,17 @@ header {
         gap: 0 10rem;
     }
 
+    .footer-parent-img {
+        width: 8%;
+    }
+
+    .footer-parent-icon span {
+        font-size: 1.2rem;
+    }
+
+    .footer-parent-i {
+        width: 10%;
+    }
 
 }
 
