@@ -523,6 +523,17 @@ header {
         padding: 1rem 1.5rem;
     }
 
+    .nav-logo {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: #F1F3F8;
+    }
+
+    /* .nav-border-link {
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: #ccc;
+    } */
     .hamburger {
         display: none;
         color: #F1F3F8;
@@ -550,7 +561,7 @@ header {
         padding: 1.2rem 2rem;
 
     }
-
+    
     .bar {
         display: block;
         width: 25px;
@@ -561,22 +572,25 @@ header {
         background-color: #F1F3F8;
     }
 
+    /* .nav-border-line {
+        
+        border: 1px solid white;
+        background: none;
+    } */
+    
     .nav-menu {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
         height: 0;
         line-height: 0;
         position: none;
         left: 0;
         top: 4rem;
-        background: none;
+        background-color: none;
         border-radius: 50px;
         transition: 0;
         box-shadow: none;
-        border: 0.5px thin white;
-
     }
 
     .nav-item {
@@ -593,11 +607,6 @@ header {
         color: #F1F3F8;
     }
 
-    .nav-logo {
-        font-size: 2.1rem;
-        font-weight: 500;
-        color: #F1F3F8;
-    }
 
     .section-mobilebody-img {
         display: none;
@@ -810,21 +819,6 @@ header {
     object-fit: cover;
 }
 
-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #504f4f ;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
 
 .grid-btn {
     display: flex;
@@ -832,8 +826,21 @@ button:hover {
 }
 
 .grid-btn button {
+    font-size: 1rem;
+    border: 2px thin white;
+    background-color: #040828;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
     padding: .8rem 4rem;
     font-size: 1.4rem;
+}
+
+.grid-btn button:hover {
+    background-color: #2980b9;
 }
 
 @media (max-width: 768px) {
