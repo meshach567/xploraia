@@ -16,31 +16,31 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }
-    
-    const gallery = document.querySelector('.gallery');
-    const toggleBtn = document.querySelector('.toggle-btn');
-    let isExpanded = false;
 
-    toggleBtn.addEventListener('click', function () {
-        isExpanded = !isExpanded;
+    const toggleButton = document.getElementById('toggleButton');
+        const row2 = document.querySelector('.grid-row-2');
+        const row3 = document.querySelector('.grid-row-3');
+        let state = 0; // 0: initial, 1: row2 shown, 2: all shown
 
-        if (isExpanded) {
-            gallery.classList.remove('collapsed');
-            gallery.classList.add('expanded');
-            toggleBtn.textContent = 'See Less';
-
-            // Add animation to newly visible items
-            const items = gallery.querySelectorAll('.gallery-item');
-            items.forEach((item, index) => {
-                if (index >= 4) {
-                    item.style.animation = 'fadeIn 0.5s ease-in-out';
-                    item.style.animationDelay = `${(index - 3) * 0.1}s`;
+        toggleButton.addEventListener('click', () => {
+            if (toggleButton.textContent === 'See More') {
+                if (state === 0) {
+                    row2.classList.add('show');
+                    state = 1;
+                } else if (state === 1) {
+                    row3.classList.add('show');
+                    toggleButton.textContent = 'See Less';
+                    state = 2;
                 }
-            });
-        } else {
-            gallery.classList.remove('expanded');
-            gallery.classList.add('collapsed');
-            toggleBtn.textContent = 'See More';
-        }
+            } else {
+                if (state === 2) {
+                    row3.classList.remove('show');
+                    state = 1;
+                } else if (state === 1) {
+                    row2.classList.remove('show');
+                    toggleButton.textContent = 'See More';
+                    state = 0;
+                }
+            }
     });
 });
